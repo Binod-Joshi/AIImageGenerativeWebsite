@@ -66,6 +66,7 @@ const CreatePost = () => {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+  
   const handleSurpriseMe = () => {
     const randomPrompt = getRandomPrompt(form.prompt);
     setForm({...form, prompt:randomPrompt});
@@ -77,7 +78,7 @@ const CreatePost = () => {
           The Community Showcase
         </h1>
         <p className="mt-2 text-[#666e75] text-[16px] max-w [500px]">
-          Create imaginative and visually stunning images through DALL-E AI and
+          Create imaginative and visually stunning images through REPLICATE and STABILITY AI and
           share them with the community
         </p>
       </div>
