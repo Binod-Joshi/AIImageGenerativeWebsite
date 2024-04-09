@@ -4,6 +4,9 @@ import { Home, CreatePost } from "./pages";
 import { logo } from "./assets";
 
 const App = () => {
+  const originalUrl = 'https://res.cloudinary.com/djvq5tufo/image/upload/v1712645162/fjaqydp6tm2lkdbdjdof.png';
+  const updatedUrl = originalUrl.replace('http://', 'https://');
+  console.log(originalUrl,updatedUrl);
   return (
     <Router>
       <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">

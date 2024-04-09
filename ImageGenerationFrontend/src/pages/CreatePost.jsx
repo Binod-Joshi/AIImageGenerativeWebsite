@@ -40,7 +40,10 @@ const CreatePost = () => {
   };
   const handleSubmit = async(e) => {
     e.preventDefault();
-    if(form.prompt && form.photo){
+    console.log(form.photo);
+    const updatedPhotoUrl = form.photo.replace('http://', 'https://');
+    const updatedForm = { ...form, photo: updatedPhotoUrl };
+    if(updatedForm?.prompt && updatedForm?.photo){
       setLoading(true);
 
       try {
@@ -49,7 +52,7 @@ const CreatePost = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(form)
+          body: JSON.stringify(updatedForm)
         })
         await response.json();
         navigate('/');
